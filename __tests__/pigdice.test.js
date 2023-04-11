@@ -27,7 +27,6 @@ describe ('Game', () => {
   //   game.currentId = 1;
   //   expect(game.findPlayer()).toEqual(player1);
   // });
-
 });
 
 describe ('Player', () => {
@@ -49,7 +48,6 @@ describe ('Player', () => {
     expect(player.roll).toBeLessThanOrEqual(6);
     expect(player.roll).toBeGreaterThanOrEqual(1);
   });
-
 });
 
 
