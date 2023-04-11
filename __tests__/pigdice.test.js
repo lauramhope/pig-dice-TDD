@@ -44,6 +44,12 @@ describe ('Player', () => {
     expect(player.roundScore).toBeGreaterThan(myTurn);
   });
 
+  test ('should return number between 1-6 when dice is rolled', () => {
+    player.rollDice();
+    expect(player.roll).toBeLessThanOrEqual(6);
+    expect(player.roll).toBeGreaterThanOrEqual(1);
+  });
+
 });
 
 
