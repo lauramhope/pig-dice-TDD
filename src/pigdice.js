@@ -1,4 +1,4 @@
-function Game(){
+export function Game(){
   this.gamePlayers = {}
   this.currentId = 1;
   this.maxId = 0;
@@ -14,51 +14,51 @@ Game.prototype.assignId = function(){
   return this.maxId;
 };
 
-Game.prototype.findPlayer = function(){
-  let currentPlayer;
-  Object.keys(this.gamePlayers).forEach(function(key) {
-    if(game.currentId.toString() ===  key){
-      currentPlayer = this.gamePlayers[key];
-    }
-  });
-  return currentPlayer;
-}
+// Game.prototype.findPlayer = function(){
+//   let currentPlayer;
+//   Object.keys(this.gamePlayers).forEach(function(key) {
+//     if(game.currentId.toString() ===  key){
+//       currentPlayer = this.gamePlayers[key];
+//     }
+//   });
+//   return currentPlayer;
+// }
 
-Game.prototype.updateCurrentId = function(){
-  if(this.currentId >= this.maxId){
-    this.currentId = 1;
-  } else {
-    this.currentId += 1;
-  }
-};
+// Game.prototype.updateCurrentId = function(){
+//   if(this.currentId >= this.maxId){
+//     this.currentId = 1;
+//   } else {
+//     this.currentId += 1;
+//   }
+// };
 
-function Player(playerName) {
-  this.playerName = playerName;
-  this.totalScore = 0;  
-  this.roundScore = 0;
-  this.roll = 0;
-}
+// export function Player(playerName) {
+//   this.playerName = playerName;
+//   this.totalScore = 0;  
+//   this.roundScore = 0;
+//   this.roll = 0;
+// }
 
-Player.prototype.playerTurn = function() {
-  this.rollDice();
-  this.roundScore += this.roll;
-};
+// Player.prototype.playerTurn = function() {
+//   this.rollDice();
+//   this.roundScore += this.roll;
+// };
 
-Player.prototype.rollDice = function() {
-  this.roll = Math.ceil(Math.random()*6); 
-};
+// Player.prototype.rollDice = function() {
+//   this.roll = Math.ceil(Math.random()*6); 
+// };
 
-Player.prototype.checkWin = function(){
-  if(this.roundScore + this.totalScore >= 100){
-    alert("This player has won the game");
-  }
-};
+// Player.prototype.checkWin = function(){
+//   if(this.roundScore + this.totalScore >= 100){
+//     alert("This player has won the game");
+//   }
+// };
 
-Player.prototype.holdDice = function(){
-  this.totalScore += this.roundScore;
-  this.roundScore = 0;
-  this.roll = 0;
-};
+// Player.prototype.holdDice = function(){
+//   this.totalScore += this.roundScore;
+//   this.roundScore = 0;
+//   this.roll = 0;
+// };
 
 
 
