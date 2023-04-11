@@ -4,8 +4,7 @@ describe ('Game', () => {
   let game;
 
   beforeEach(() => {
-    game = new Game(0);
-
+    game = new Game();
   });
 
   test ('should add player to the game', () => {
@@ -15,10 +14,12 @@ describe ('Game', () => {
   });
 
   test ('should correctly create an id for each player', () => {
-    const playerId = new Game(0); 
-    expect(playerId.maxId).toEqual(0);
+    const newPlayer1 = { name: "Jessica"};
+    game.addPlayer(newPlayer1);
+    expect(newPlayer1.id).toEqual(1);
   });
   
+
 });
 
 
