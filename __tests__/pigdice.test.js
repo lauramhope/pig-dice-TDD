@@ -1,17 +1,26 @@
 import { Game, Player } from './../src/pigdice.js';
 
 describe ('Game', () => {
+  let game;
 
-  test('should correctly create an id for each player', () => {
+  beforeEach(() => {
+    game = new Game(0);
+
+  });
+
+  test ('should add player to the game', () => {
+    const newPlayer = { name: "Jessica"};
+    game.addPlayer(newPlayer);
+    expect(game.gamePlayers).toEqual({1: newPlayer});
+  });
+
+  test ('should correctly create an id for each player', () => {
     const playerId = new Game(0); 
     expect(playerId.maxId).toEqual(0);
   });
   
-  test ('should add player to the game'), () => {
-    const 
-  }
-
 });
+
 
 
 // describe('Triangle', () => {
