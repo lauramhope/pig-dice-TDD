@@ -19,6 +19,30 @@ describe ('Game', () => {
     expect(newPlayer1.id).toEqual(1);
   });
   
+  // test ('should find the current player of the game', () => {
+  //   const player1 = { name: "Jessica"};
+  //   const player2 = { name: "Laura"};
+  //   game.addPlayer(player1);
+  //   game.addPlayer(player2);
+  //   game.currentId = 1;
+  //   expect(game.findPlayer()).toEqual(player1);
+  // });
+
+});
+
+describe ('Player', () => {
+  let player;
+
+  beforeEach(() => {
+    player = new Player("Laura");
+  });
+
+  test ('should return a number between 1-6 for players turn rolling dice', () => {
+    const myTurn = player.roundScore;
+    player.rollDice();
+    player.playerTurn();
+    expect(player.roundScore).toBeGreaterThan(myTurn);
+  });
 
 });
 

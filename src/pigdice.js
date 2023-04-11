@@ -14,15 +14,15 @@ Game.prototype.assignId = function(){
   return this.maxId;
 };
 
-// Game.prototype.findPlayer = function(){
+// Game.prototype.findPlayer = function() {
 //   let currentPlayer;
 //   Object.keys(this.gamePlayers).forEach(function(key) {
-//     if(game.currentId.toString() ===  key){
+//     if(this.currentId.toString() === key){
 //       currentPlayer = this.gamePlayers[key];
 //     }
 //   });
 //   return currentPlayer;
-// }
+// };
 
 // Game.prototype.updateCurrentId = function(){
 //   if(this.currentId >= this.maxId){
@@ -39,14 +39,14 @@ export function Player(playerName) {
   this.roll = 0;
 }
 
-// Player.prototype.playerTurn = function() {
-//   this.rollDice();
-//   this.roundScore += this.roll;
-// };
+Player.prototype.playerTurn = function() {
+  this.rollDice();
+  this.roundScore += this.roll;
+};
 
-// Player.prototype.rollDice = function() {
-//   this.roll = Math.ceil(Math.random()*6); 
-// };
+Player.prototype.rollDice = function() {
+  this.roll = Math.ceil(Math.random()*6); 
+};
 
 // Player.prototype.checkWin = function(){
 //   if(this.roundScore + this.totalScore >= 100){
